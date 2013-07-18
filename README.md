@@ -28,11 +28,11 @@ for imgId in `docker images | grep "<none>" | awk '{ print $3 }'`; do echo $imgI
 
 2. Rebuild your **host** internets (as root):
 > ```
-  services docker stop
+  service docker stop
   iptables -t nat -F
   ifconfig docker0 down
   brctl delbr docker0
-  services docker start
+  service docker start
   ```
 
 
