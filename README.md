@@ -26,13 +26,13 @@ for imgId in `docker images | grep "<none>" | awk '{ print $3 }'`; do echo $imgI
 1. Make sure your **host** can reach the internet, and that DNS works:
 > `ping -c 1 bacon.io`
 
-2. Rebuild your **host** internets:
+2. Rebuild your **host** internets (as root):
 > ```
-  pkill docker
+  services docker stop
   iptables -t nat -F
   ifconfig docker0 down
   brctl delbr docker0
-  docker -d
+  services docker start
   ```
 
 
