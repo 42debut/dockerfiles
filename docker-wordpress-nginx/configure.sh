@@ -39,7 +39,7 @@ s/password_here/$WORDPRESS_PASSWORD/
 
 # Download nginx helper plugin
 curl -O `curl -i -s http://wordpress.org/plugins/nginx-helper/ | egrep -o "http://downloads.wordpress.org/plugin/[^']+"`
-unzip nginx-helper.*.zip -d /usr/share/nginx/www/wp-content/plugins
+unzip nginx-helper.*.zip -d $WWW_ROOT/wp-content/plugins
 chown -R $WWW_USER:$WWW_USER $WWW_ROOT/wp-content/plugins/nginx-helper
 
 # Activate nginx plugin and set up pretty permalink structure once logged in
