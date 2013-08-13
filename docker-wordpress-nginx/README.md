@@ -1,4 +1,3 @@
-
 # docker-wordpress-nginx
 
 A Dockerfile that installs the latest wordpress, nginx, php-apc and php-fpm.
@@ -9,7 +8,7 @@ A Dockerfile that installs the latest wordpress, nginx, php-apc and php-fpm.
 ```
 $ git clone https://github.com/eugeneware/docker-wordpress-nginx.git
 $ cd docker-wordpress-nginx
-$ docker build -t="docker-wordpress-nginx" .
+$ docker build -t docker-wordpress-nginx .
 ```
 
 
